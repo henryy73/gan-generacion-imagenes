@@ -8,14 +8,16 @@ This repository compares DCGAN and WGAN-GP architectures for facial image synthe
 
 ## 📂 Repository Structure
 
-The project follows a modular structure, separating the heavy mathematical training logic from the visual analysis:
+The project follows a modular structure, separating the heavy mathematical training logic, the theoretical foundations, and the visual analysis:
 
 ```text
-├── dcgan.py                  # Implementation of standard DCGAN with Spectral Normalization
-├── wgan_gp.py                # Implementation of WGAN with Gradient Penalty
-├── Model_evaluation.ipynb    # Interactive notebook comparing precomputed results
-├── results_dcgan/            # Precomputed metrics and plots for DCGAN
+├── docs/                     
+│   └── Mathematical_Foundations.pdf  # Theoretical analysis and mathematical proofs
+├── dcgan.py                          # Implementation of standard DCGAN with Spectral Normalization
+├── wgan_gp.py                        # Implementation of WGAN with Gradient Penalty
+├── Model_evaluation.ipynb            # Interactive notebook comparing precomputed results
+├── results_dcgan/                    # Precomputed metrics and plots for DCGAN
 │   └── training_metrics.npz
-├── results_wgan/             # Precomputed metrics and plots for WGAN-GP
+├── results_wgan/                     # Precomputed metrics and plots for WGAN-GP
 │   └── training_metrics.npz
-└── README.md                 # Project documentation
+└── README.md                         # Project documentation
