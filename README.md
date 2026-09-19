@@ -1,13 +1,21 @@
-# gan-generacion-imagenes
+# Facial Image Synthesis: DCGAN vs. WGAN-GP
+
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white)
 
 This repository compares DCGAN and WGAN-GP architectures for facial image synthesis on the CelebA dataset. It evaluates training stability, convergence, and generation quality, using the Fréchet Inception Distance (FID) metric across epochs to provide an objective measure of generative performance.
 
 ## 📂 Repository Structure
 
+The project follows a modular structure, separating the heavy mathematical training logic from the visual analysis:
+
 ```text
-├── dcgan.py             # Implementation of standard DCGAN with Spectral Normalization
-├── wgan-gp.py           # Implementation of WGAN with Gradient Penalty (Critic and GP logic)
-├── README.md            # Project documentation
-└── assets/              # Folder containing saved plots and generated images
+├── dcgan.py                  # Implementation of standard DCGAN with Spectral Normalization
+├── wgan_gp.py                # Implementation of WGAN with Gradient Penalty
+├── Model_evaluation.ipynb    # Interactive notebook comparing precomputed results
+├── results_dcgan/            # Precomputed metrics and plots for DCGAN
+│   └── training_metrics.npz
+├── results_wgan/             # Precomputed metrics and plots for WGAN-GP
+│   └── training_metrics.npz
+└── README.md                 # Project documentation
